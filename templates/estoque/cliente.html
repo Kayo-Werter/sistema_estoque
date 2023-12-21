@@ -1,0 +1,50 @@
+{% extends 'estoque/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container d-flex justify-content-between py-3">
+  <h2 class="texto-titulos">Clientes</h2>
+  <a href="{% url 'novo_cliente' %}"><button type="button" class="btn btn-secondary rounded-5 fw-bold">Novo
+      Cliente</button></a>
+</div>
+<div class="p-3 mb-2 bg-box">
+  <table class="table table-hover text-center">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Endereço</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="-3">
+      <tr>
+        <th scope="row">1</th>
+        <td>Kayo Werter</td>
+        <td>123.456.789-98</td>
+        <td>(83) 998115197</td>
+        <td>Rua Espinharas N° 14</td>
+        <td><a type="button" class="btn btn-danger">Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Joao Victor</td>
+        <td>123.456.789-98</td>
+        <td>(83) 998115197</td>
+        <td>Rua Espinharas N° 14</td>
+        <td><a type="button" class="btn btn-danger">Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Raniere Luiz</td>
+        <td>123.456.789-98</td>
+        <td>(83) 998115197</td>
+        <td>Rua Espinharas N° 14</td>
+        <td><a type="button" class="btn btn-danger">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

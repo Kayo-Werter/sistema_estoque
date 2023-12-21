@@ -1,0 +1,73 @@
+{% extends 'estoque/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="py-4 container" data-aos="flip-down" data-aos-delay="400">
+    <div class="col-10 col-xl-8 mx-auto">
+        <div class="border border-2 p-3 ">
+            <h2 class="fw-bold p-3">Novo Cliente</h2>
+            <form id="contato">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingNome" placeholder="Nome do Produto">
+                            <label for="floatingNome" class="px-3">Nome</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">CPF</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">Telefone</label>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">CEP</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">logradouro</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">Número</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">Complemento</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">Bairro</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingQuantidade" placeholder="Quantidade">
+                            <label for="floatingQuantidade" class="px-3">Cidade</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success w-100 py-3 fw-bold mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
