@@ -1,0 +1,37 @@
+{% extends 'estoque/base.html' %}
+{% load static %}
+{% block content %}
+
+{% for message in messages %}
+<div class="alert alert-danger">
+    <p id="messages">{{ message }}</p>
+</div>
+{% endfor %}
+
+<main class="main_login">
+    <section id="login">
+        <div id="imagem">
+
+        </div>
+        <div id="formulario">
+            <h1 class="text-center fw-bold">Login</h1>
+            <p class="text-center">Seja bem-vindo(a). Faça login para acessar sua conta</p>
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <div class="campo row">
+                    {% for field in form.visible_fields %}
+                    <div class="campos_formulario col-12 col-lg-12">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{field}}
+                    </div>
+                    {% endfor %}
+                    <div class="botao">
+                        <button type="submit" class="botao_login fw-bold">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
