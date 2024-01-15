@@ -3,10 +3,9 @@
 {% block content %}
 <div class="container d-flex justify-content-between py-3">
     <h2 class="texto-titulos">Estoque</h2>
-    <a href="{% url 'adicionar_estoque' %}"><button type="button" class="btn btn-secondary rounded-5 fw-bold">+Adicionar
-            Estoque</button></a>
+    <a href="{% url 'adicionar_produto' %}"><button type="button" class="btn btn-secondary rounded-5 fw-bold">+Adicionar
+            Produto</button></a>
 </div>
-
 <section class="tags container">
     <p class="tags__titulo">Tamanhos:</p>
     <ul class="tags__lista">
@@ -40,11 +39,11 @@
             {% for produto in estoque %}
             <tr>
                 <th scope="row">{{ produto.id }}</th>
-                <td>{{ produto.nome }}</td>
+                <td>{{ produto.nome.capitalize }}</td>
                 <td>{{ produto.quantidade }}</td>
                 <td>{{ produto.tamanho }}</td>
                 <td>{{ produto.data }}</td>
-                <td><a type="button" class="btn btn-danger">Editar</a></td>
+                <td><a type="button" href="{% url 'produto' %}" class="btn btn-danger">Visualizar</a></td>
             </tr>
             {% endfor %}
             {% else %}

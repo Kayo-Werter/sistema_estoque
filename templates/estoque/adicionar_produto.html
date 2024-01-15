@@ -1,0 +1,27 @@
+{% extends 'estoque/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="py-4 container" data-aos="flip-down" data-aos-delay="400">
+    <div class="col-10 col-xl-8 mx-auto">
+        <div class="border border-2 p-3 ">
+            <h3 class="fw-bold p-3">Cadastrar Produto</h3>
+            <form id="contato" action="{% url 'adicionar_produto' %}" method="POST">
+                {% csrf_token %}
+                <div class="row g-3">
+                    {% for field in form.visible_fields %}
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            {{ field }}   
+                            <label class="px-3" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button type="submit" class="btn btn-success w-100 py-3 fw-bold mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
